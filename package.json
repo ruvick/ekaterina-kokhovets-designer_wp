@@ -1,7 +1,7 @@
 {
-  "name": "smartgardens",
+  "name": "kokhovets-designer",
   "version": "1.0.1",
-  "description": "smartgardens",
+  "description": "kokhovets-designer",
   "main": "index.php",
   "scripts": {
     "test": "editorconfig-checker",
