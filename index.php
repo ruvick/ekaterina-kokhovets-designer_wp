@@ -14,7 +14,7 @@
 				<div class="slider-bg__container _container">
 					<h1 class="slider-bg__title title">
 						Представьте <br>
-						<span>СВОЙ БУДУЩИЙ ДОМ</span>
+						<span>СВОЙ БУДУЩИЙ ДОМ</span> 
 					</h1>
 					<a href="#callback" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
 				</div>
