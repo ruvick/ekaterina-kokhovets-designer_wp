@@ -34,13 +34,19 @@
         </div>
         <div class="footer__top-menu-column">
           <h6 class="footer__top-menu-title">КОНТАКТЫ</h6>
-          <a href="tel:+79284464100" class="footer__top-menu-phone contacts__phone">+7 928 446 4100</a>
+          <? $tel = carbon_get_theme_option("as_phones_1"); 
+					if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__top-menu-phone contacts__phone"><? echo $tel; ?></a><?}?> 
           <div class="footer__top-menu-soc-block soc-block">
-            <a href="#" class="soc-block__icon soc-block__icon_01"></a>
-            <a href="#" class="soc-block__icon soc-block__icon_02"></a>
-            <a href="#" class="soc-block__icon soc-block__icon_03"></a>
-            <a href="#" class="soc-block__icon soc-block__icon_04"></a>
-            <a href="#" class="soc-block__icon soc-block__icon_05"></a>
+					<? $ok = carbon_get_theme_option("as_ok"); if (!empty($ok)){?>
+					<a href="<? echo $ok; ?>" class="soc-block__icon soc-block__icon_01"></a><?}?>
+					<? $insta = carbon_get_theme_option("as_insta"); if (!empty($insta)){?>
+					<a href="<? echo $insta; ?>" class="soc-block__icon soc-block__icon_02"></a><?}?>
+					<? $vk= carbon_get_theme_option("as_vk"); if (!empty($vk)){?>
+					<a href="<? echo $vk; ?>" class="soc-block__icon soc-block__icon_03"></a><?}?>
+					<? $telegr= carbon_get_theme_option("as_insta"); if (!empty($telegr)){?>
+					<a href="<? echo $telegr; ?>" class="soc-block__icon soc-block__icon_04"></a><?}?>
+					<? $whatsapp= carbon_get_theme_option("as_whatsapp"); if (!empty($whatsapp)){?>
+					<a href="<? echo $whatsapp; ?>" class="soc-block__icon soc-block__icon_05"></a><?}?>
           </div>
           <p class="footer__top-menu-soc-text">Мы в соцсетях</p>
         </div>
