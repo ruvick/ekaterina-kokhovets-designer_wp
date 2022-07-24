@@ -1,11 +1,5 @@
 <?php
 
-/*
-Template Name: Шаблон карточки товаров
-WP Post Template: Шаблон карточки товаров
-Template Post Type: post
-*/
-
 get_header(); ?>
 
 <?php get_template_part('template-parts/header-section');?>
@@ -24,7 +18,17 @@ get_header(); ?>
 
 	<section id="page-section" class="page-section">
 		<div class="_container">
+      <div class="page-inner">
 
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<picture>
+						<?php echo get_the_post_thumbnail( $post->ID, "turImg", array("alt" => $post->post_title, "title" => $post->post_title));?>
+					</picture>
+					<?php the_content();?> 
+				<?php endwhile;?>
+			<?php endif; ?>
+      
+      </div>
 	  </div>
 	</section>
 

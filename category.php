@@ -8,15 +8,24 @@
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
 			<h1 class="page-banner__title title">
-				Мы предлагаем <br>
-				<span>НАШИ УСЛУГИ</span>
+        <? single_cat_title(); ?>
+				<!-- Мы предлагаем <br>
+				<span>НАШИ УСЛУГИ</span> -->
 			</h1>
 		</div>
 	</section>
 
 	<section id="page-section" class="page-section">
 		<div class="_container">
+      <div class="page-inner">
+        <?php if (have_posts()) {
+					while (have_posts()) { 
+						the_post(); ?>
 
+			  <?php 	} //конец while
+				  } //конец if 
+			  ?>
+      </div>
 	  </div>
 	</section>
 
