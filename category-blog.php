@@ -13,18 +13,16 @@
 				<span>НАШИ УСЛУГИ</span> -->
 			</h1>
 		</div>
-	</section>
+	</section> 
 
 	<section id="page-section" class="page-section">
 		<div class="_container">
-      <div class="page-inner">
-			<?php if (have_posts()) {
-					while (have_posts()) { 
-						the_post(); ?>
-
-
-				<?php 	} //конец while
-				} //конец if 
+      <div class="blog__inner page-inner">
+				<?php
+					while (have_posts()) :
+						the_post();
+						get_template_part('template-parts/blog-elem');
+					endwhile;
 				?>
       </div>
 	  </div>

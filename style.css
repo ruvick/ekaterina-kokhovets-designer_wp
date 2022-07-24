@@ -4440,6 +4440,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .page-inner {
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }

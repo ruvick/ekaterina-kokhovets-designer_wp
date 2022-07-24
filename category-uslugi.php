@@ -17,14 +17,12 @@
 
 	<section id="page-section" class="page-section">
 		<div class="_container">
-      <div class="page-inner">
-			<?php if (have_posts()) {
-					while (have_posts()) { 
-						the_post(); ?>
-
-
-				<?php 	} //конец while
-				} //конец if 
+      <div class="services__inner page-inner">
+				<?php
+					while (have_posts()) :
+						the_post();
+						get_template_part('template-parts/services-elem');
+					endwhile;
 				?>
       </div>
 	  </div>
