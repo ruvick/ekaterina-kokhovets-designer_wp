@@ -7,21 +7,23 @@ Template Post Type: page
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/header-section');?>
+<?php get_template_part('template-parts/header-section');?> 
 
 <main class="page">
-  <section class="content">
-  <div class="_container">
 
-  <?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-			}
-			?> 
+	<section class="page-banner page-banner-services">
+		<div class="page-banner__nuar_blk nuar_blk"></div>
+		<div class="page-banner__container _container">
+			<h1 class="page-banner__title title">
+				<?php the_title();?>
+			</h1>
+		</div>
+	</section>
 
-	<h1><? the_title();?></h1> 
-
-  <ul> 
+	<section id="page-section" class="page-section">
+		<div class="_container">
+			<div class="content">
+			<ul> 
 	  <? $org = carbon_get_theme_option("as_company"); if (!empty($org)){?><li>Организация: <strong><? echo $org; ?></strong></li><?}?> 
 		<? $adr = carbon_get_theme_option("as_address"); if (!empty($adr)){?><li>Адрес: <strong><? echo $adr; ?></strong></li><?}?>
 		<? $inn = carbon_get_theme_option("as_inn"); if (!empty($inn)){?><li>ИНН: <strong><? echo $inn; ?></strong></li><?}?>
@@ -78,7 +80,11 @@ get_header(); ?>
 
   }
 </script>
+			</div>
+	  </div>
+	</section>
 
+	</main>
 </div>
 </section>
 
