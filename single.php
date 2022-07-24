@@ -12,8 +12,22 @@ get_header(); ?>
 
 <main class="page">
 
+	<section class="page-banner page-banner-services">
+		<div class="page-banner__nuar_blk nuar_blk"></div>
+		<div class="page-banner__container _container">
+			<h1 class="page-banner__title title">
+				Мы предлагаем <br>
+				<span>НАШИ УСЛУГИ</span>
+			</h1>
+		</div>
+	</section>
 
+	<section id="page-section" class="page-section">
+		<div class="_container">
 
-</main>
+	  </div>
+	</section>
+
+	</main>
 
 <?php get_footer();
