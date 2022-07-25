@@ -3757,6 +3757,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 18px;
 }
 
+.footer__top-menu-list li a,
 .footer__top-menu-list-item-link {
   color: #fff;
 }

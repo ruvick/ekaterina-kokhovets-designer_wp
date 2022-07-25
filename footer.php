@@ -9,28 +9,13 @@
       <div class="footer__top-menu d-flex">
         <div class="footer__top-menu-column">
           <h6 class="footer__top-menu-title">УСЛУГИ</h6>
-          <ul class="footer__top-menu-list">
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Разработка
-                проекта дизайна интерьера</a></li>
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Архитектурное
-                проектирование</a></li>
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Ремонт и
-                отделка</a></li>
-            <li class="footer__top-menu-list-item"><a href="#"
-                class="footer__top-menu-list-item-link">Визуализация</a></li>
-          </ul>
+          <?php wp_nav_menu( array('theme_location' => 'menu_services','menu_class' => 'footer__top-menu-list',
+						'container_class' => 'footer__top-menu-list','container' => false )); ?> 
         </div>
         <div class="footer__top-menu-column">
           <h6 class="footer__top-menu-title">ПОРТФОЛИО</h6>
-          <ul class="footer__top-menu-list">
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Дома</a></li>
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Квартиры</a>
-            </li>
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Кафе и
-                рестораны</a></li>
-            <li class="footer__top-menu-list-item"><a href="#" class="footer__top-menu-list-item-link">Офисные
-                помещения</a></li>
-          </ul>
+          <?php wp_nav_menu( array('theme_location' => 'menu_portfolio','menu_class' => 'footer__top-menu-list',
+						'container_class' => 'footer__top-menu-list','container' => false )); ?> 
         </div>
         <div class="footer__top-menu-column">
           <h6 class="footer__top-menu-title">КОНТАКТЫ</h6>
