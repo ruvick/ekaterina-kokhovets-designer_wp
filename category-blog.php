@@ -19,7 +19,7 @@
 		<div class="_container">
       <div class="blog__inner page-inner">
 				<?php
-					while (have_posts()) :
+					while (have_posts()) : 
 						the_post();
 						get_template_part('template-parts/blog-elem');
 					endwhile;

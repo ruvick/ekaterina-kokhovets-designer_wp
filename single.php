@@ -9,10 +9,7 @@ get_header(); ?>
 	<section class="page-banner page-banner-services">
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
-			<h1 class="page-banner__title title">
-				Мы предлагаем <br>
-				<span>НАШИ УСЛУГИ</span>
-			</h1>
+			<h1 class="page-banner__title title"><? the_title();?></h1>
 		</div>
 	</section>
 

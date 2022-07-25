@@ -181,95 +181,26 @@
 	</div>
 	<div class="services__wrap">
 		<div class="_container">
-
 			<div class="services__inner">
-
-				<div class="services__column">
-					<div class="services__card">
-						<div class="services__card-descp">
-							<h5 class="services__card-descp-name">УСЛУГА №1</h5>
-							<span class="services__card-descp-name-line line-mini"></span>
-							<p class="services__card-descp-text">
-								Разработка дизайн-проектов квартир, коттеджей, домов,
-								ресторанов, баров, кафе, офисов, гостиниц
-							</p>
-						</div>
-						<div class="services__card-slider ">
-							<div class="services__card-slider-inner servicesSl _swiper">
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/01.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/02.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/03.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-							</div>
-							<div class="servicesSl-swiper-paggination"></div>
-						</div>
-						<div class="services__card-btn btn btn_white">Подробнее</div>
-					</div>
-				</div>
-
-				<div class="services__column">
-					<div class="services__card">
-						<div class="services__card-descp">
-							<h5 class="services__card-descp-name">УСЛУГА №2</h5>
-							<span class="services__card-descp-name-line line-mini"></span>
-							<p class="services__card-descp-text">
-								Разработка дизайн-проектов квартир, коттеджей, домов,
-								ресторанов, баров, кафе, офисов, гостиниц
-							</p>
-						</div>
-						<div class="services__card-slider ">
-							<div class="services__card-slider-inner servicesSl _swiper">
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/02.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/03.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/01.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-							</div>
-							<div class="servicesSl-swiper-paggination"></div>
-						</div>
-						<div class="services__card-btn btn btn_white">Подробнее</div>
-					</div>
-				</div>
-
-				<div class="services__column">
-					<div class="services__card">
-						<div class="services__card-descp">
-							<h5 class="services__card-descp-name">УСЛУГА №3</h5>
-							<span class="services__card-descp-name-line line-mini"></span>
-							<p class="services__card-descp-text">
-								Разработка дизайн-проектов квартир, коттеджей, домов,
-								ресторанов, баров, кафе, офисов, гостиниц
-							</p>
-						</div>
-						<div class="services__card-slider ">
-							<div class="services__card-slider-inner servicesSl _swiper">
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/03.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/01.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-								<div class="services__card-slider-slide slider-slide">
-									<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/02.jpg?_v=1658398529275" alt=""></picture>
-								</div>
-							</div>
-							<div class="servicesSl-swiper-paggination"></div>
-						</div>
-						<a href="page-service.html" class="services__card-btn btn btn_white">Подробнее</a>
-					</div>
-				</div>
-
+				<?php 
+					$posts = get_posts( array(
+						'numberposts' => 3,
+						'category'    => 5,
+						'orderby'     => 'date',
+						'order'       => 'ASC',
+						'include'     => array(),
+						'exclude'     => array(),
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'post',
+						'suppress_filters' => true,
+					) );
+					$result = wp_get_recent_posts( $args );
+						foreach( $posts as $post ){
+							get_template_part('template-parts/services-elem');
+					} 
+				?>
 			</div>
-
 		</div>
 	</div>
 </section>
@@ -508,79 +439,26 @@
 			Полезные материалы <br>
 			<span>БЛОГ</span>
 		</h2>
-
 		<div class="blog__inner">
-
-			<div class="blog__column">
-				<div class="blog__card">
-					<div class="blog__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/blog/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/blog/01.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="blog__card-descp">
-						<h5 class="blog__card-descp-title">Ремонт квартир и домов</h5>
-						<div class="blog__card-descp-line line-mini"></div>
-						<p class="blog__card-descp-text">
-							На кухне установлена газовая плита и, согласно нормативам, кухню требовалось отделить от гостиной.
-							Авторы проекта предусмотрели между двумя помещениями откатную перегородку, а остальные
-						</p>
-					</div>
-					<a href="#" class="blog__card-btn btn btn_white">Подробнее</a>
-				</div>
-			</div>
-
-			<div class="blog__column">
-				<div class="blog__card">
-					<div class="blog__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/blog/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/blog/02.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="blog__card-descp">
-						<h5 class="blog__card-descp-title">Правильное освещение</h5>
-						<div class="blog__card-descp-line line-mini"></div>
-						<p class="blog__card-descp-text">
-							На кухне установлена газовая плита и, согласно нормативам, кухню требовалось отделить от гостиной.
-							Авторы проекта предусмотрели между двумя помещениями откатную перегородку, а остальные
-						</p>
-					</div>
-					<a href="#" class="blog__card-btn btn btn_white">Подробнее</a>
-				</div>
-			</div>
-
-			<div class="blog__column">
-				<div class="blog__card">
-					<div class="blog__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/blog/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/blog/03.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="blog__card-descp">
-						<h5 class="blog__card-descp-title">Гармоничный интерьер</h5>
-						<div class="blog__card-descp-line line-mini"></div>
-						<p class="blog__card-descp-text">
-							На кухне установлена газовая плита и, согласно нормативам, кухню требовалось отделить от гостиной.
-							Авторы проекта предусмотрели между двумя помещениями откатную перегородку, а остальные
-						</p>
-					</div>
-					<a href="#" class="blog__card-btn btn btn_white">Подробнее</a>
-				</div>
-			</div>
-
-			<div class="blog__column">
-				<div class="blog__card">
-					<div class="blog__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/blog/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/blog/04.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="blog__card-descp">
-						<h5 class="blog__card-descp-title">Интерьер и природа</h5>
-						<div class="blog__card-descp-line line-mini"></div>
-						<p class="blog__card-descp-text">
-							На кухне установлена газовая плита и, согласно нормативам, кухню требовалось отделить от гостиной.
-							Авторы проекта предусмотрели между двумя помещениями откатную перегородку, а остальные
-						</p>
-					</div>
-					<a href="#" class="blog__card-btn btn btn_white">Подробнее</a>
-				</div>
-			</div>
-
+			<?php 
+				$posts = get_posts( array(
+					'numberposts' => 4,
+					'category'    => 8,
+					'orderby'     => 'date',
+					'order'       => 'ASC',
+					'include'     => array(),
+					'exclude'     => array(),
+					'meta_key'    => '',
+					'meta_value'  =>'',
+					'post_type'   => 'post',
+					'suppress_filters' => true,
+				) );
+				$result = wp_get_recent_posts( $args );
+					foreach( $posts as $post ){
+						get_template_part('template-parts/blog-elem');
+				} 
+			?>
 		</div>
-
 	</div>
 </section>
 

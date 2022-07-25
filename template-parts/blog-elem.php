@@ -1,16 +1,19 @@
 <div class="blog__column">
 	<div class="blog__card">
-		<div class="blog__card-img">
-			<picture><source srcset="<?php echo get_template_directory_uri();?>/img/blog/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/blog/01.jpg?_v=1658398529275" alt=""></picture>
-		</div>
+		<a href="<?echo get_the_permalink(get_the_ID());?>"class="blog__card-img">
+			<img src="<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" alt="<? the_title();?>"> 
+		</a>
 		<div class="blog__card-descp">
-			<h5 class="blog__card-descp-title">Ремонт квартир и домов</h5>
+			<h5 class="blog__card-descp-title"><? the_title();?></h5>
 			<div class="blog__card-descp-line line-mini"></div>
 			<p class="blog__card-descp-text">
-				На кухне установлена газовая плита и, согласно нормативам, кухню требовалось отделить от гостиной.
-				Авторы проекта предусмотрели между двумя помещениями откатную перегородку, а остальные
+				<?php 
+					$maxchar = 200;
+					$text = strip_tags( get_the_excerpt() );
+						echo mb_substr( $text, 0, $maxchar );
+				?>
 			</p>
 		</div>
-		<a href="#" class="blog__card-btn btn btn_white">Подробнее</a>
+		<a href="<?echo get_the_permalink(get_the_ID());?>" class="blog__card-btn btn btn_white">Подробнее</a> 
 	</div>
 </div>
