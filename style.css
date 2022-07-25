@@ -4697,7 +4697,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 /* Popup JS End*/
 
-
+.page-inner .reviews__card {
+  margin-bottom: 30px;
+}
 
 
 
