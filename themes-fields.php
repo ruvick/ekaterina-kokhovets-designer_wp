@@ -123,6 +123,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make('text', 'text_map', 'Текст метки карты')
           ->set_width(50),
     ) );
+    Container::make('post_meta', 'page', 'Доп поля')
+    ->show_on_template(array('page.php', 'page-team.php'))
+        ->add_fields(array(   
+          Field::make('image', 'page-banner', 'Банер страницы' )->set_width(50),
+    ));
+
+
+
     Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
     ->show_on_post_type(array( 'ultra'))
       ->add_fields(array(   
