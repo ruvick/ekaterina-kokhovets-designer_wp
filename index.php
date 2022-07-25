@@ -8,40 +8,28 @@
 
 	<div class="slider-bg-wrap ">
 		<div class="slider-bg _swiper">
-
-			<div class="slider-bg__slide slider__slide slider-main__slide-1">
-				<div class="nuar_blk"></div>
-				<div class="slider-bg__container _container">
-					<h1 class="slider-bg__title title">
-						Представьте <br>
-						<span>СВОЙ БУДУЩИЙ ДОМ</span> 
-					</h1>
-					<a href="#callback" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
-				</div>
-			</div>
-
-			<div class="slider-bg__slide slider__slide slider-main__slide-1">
-				<div class="nuar_blk"></div>
-				<div class="slider-bg__container _container">
-					<h1 class="slider-bg__title title">
-						Представьте <br>
-						<span>СВОЙ БУДУЩИЙ ДОМ</span>
-					</h1>
-					<a href="#callback" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
-				</div>
-			</div>
-
-			<div class="slider-bg__slide slider__slide slider-main__slide-1">
-				<div class="nuar_blk"></div>
-				<div class="slider-bg__container _container">
-					<h1 class="slider-bg__title title">
-						Представьте <br>
-						<span>СВОЙ БУДУЩИЙ ДОМ</span>
-					</h1>
-					<a href="#callback" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
-				</div>
-			</div>
-
+		<?
+			$pict = carbon_get_theme_option('slider_index');
+			if ($pict) {
+				$pictIndex = 0;
+				foreach ($pict as $item) {
+					?>
+						<div class="slider-bg__slide slider__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
+							<div class="nuar_blk"></div>
+							<div class="slider-bg__container _container">
+								<? if (!empty($item['slider_title'])) { ?>
+									<h1 class="slider-bg__title title"><? echo $item['slider_title']; ?></h1>
+								<? } ?>
+								<? if (!empty($item['slider_link_text'])) { ?>
+									<a href="<? echo $item['slider_link']; ?>" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
+								<? } ?>
+							</div>
+						</div>
+					<?
+					$pictIndex++;
+				}
+			}
+			?> 
 		</div>
 		<div class="product-sl-paggination swiper-paggination"></div>
 	</div>
