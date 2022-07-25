@@ -230,124 +230,29 @@
 		</h2>
 	</div>
 
-	<div class="team__wrap">
-		<div class="team__bg"></div>
-		<div class="_container">
-
-			<div class="team__img">
-				<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/1-1.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/1-1.jpg?_v=1658398529275" alt=""></picture>
-			</div>
-
-			<div class="team__descp">
-				<h5 class="team__title">ЕКАТЕРИНА КОХОВЕЦ</h5>
-				<p class="team__subtitle">руководитель по дизайну</p>
-				<div class="team__descp-text-block">
-					<p>
-						А также непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть
-						подвергнуты целой серии независимых исследований! В частности, сплочённость команды профессионалов
-						требует от нас анализа распределения внутренних резервов и ресурсов.
-					</p>
-					<p>
-						Идейные соображения высшего порядка, а также выбранный нами инновационный путь требует от нас анализа
-						благоприятных перспектив. Значимость этих проблем настолько очевидна, что внедрение современных
-						методик, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для анализа
-						существующих паттернов поведения.
-					</p>
-					<p>
-						Таким образом, сплочённость команды профессионалов, в своём классическом представлении, допускает
-						внедрение укрепления моральных ценностей. С другой стороны, начало повседневной работы по формированию
-						позиции требует определения и уточнения кластеризации усилий. Однозначно, представители современных
-						социальных резервов представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и
-						должны быть описаны максимально подробно.
-					</p>
+	<? $teamPost = carbon_get_theme_option("team_text");
+	  if (!empty($teamPost)) { ?>
+			<div class="team__wrap">
+				<div class="team__bg"></div>
+				 <div class="_container">
+					<div class="team__img">
+            <img src="<?php echo wp_get_attachment_image_src(carbon_get_theme_option("team_images"), 'full')[0];?>" alt="<? the_title();?>">						
+          </div>
+					<div class="team__descp">
+						<h5 class="team__title"><?php echo carbon_get_theme_option('team_title'); ?></h5>
+						<p class="team__subtitle"><?php echo carbon_get_theme_option('team_subtitle'); ?></p>
+						<div class="team__descp-text-block">
+              <? echo $teamPost; ?>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-
-	</div>
+  <? } ?>
 
 	<div class="_container">
-
 		<div class="team__inner">
-
-			<div class="team__column">
-				<div class="team__card">
-					<div class="team__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/01.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<h5 class="team__card-name">
-						НАТАЛЬЯ
-						Александровна
-					</h5>
-					<div class="team__card-line line-mini"></div>
-					<div class="team__card-speciality">проектировщик</div>
-				</div>
-			</div>
-
-			<div class="team__column">
-				<div class="team__card">
-					<div class="team__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/02.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<h5 class="team__card-name">
-						СЕРГЕЙ
-						Александрович
-					</h5>
-					<div class="team__card-line line-mini"></div>
-					<div class="team__card-speciality">
-						руководитель <br>
-						по строительству
-					</div>
-				</div>
-			</div>
-
-			<div class="team__column">
-				<div class="team__card">
-					<div class="team__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/03.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<h5 class="team__card-name">
-						ДЕНИС
-						Владимирович
-					</h5>
-					<div class="team__card-line line-mini"></div>
-					<div class="team__card-speciality">визуалист</div>
-				</div>
-			</div>
-
-			<div class="team__column">
-				<div class="team__card">
-					<div class="team__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/04.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<h5 class="team__card-name">
-						ТАТЬЯНА
-						Валентиновна
-					</h5>
-					<div class="team__card-line line-mini"></div>
-					<div class="team__card-speciality">
-						архитектор, <br>
-						проектировщик
-					</div>
-				</div>
-			</div>
-
-			<div class="team__column">
-				<div class="team__card">
-					<div class="team__card-img">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/05.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<h5 class="team__card-name">
-						РОМАН
-						Александрович
-					</h5>
-					<div class="team__card-line line-mini"></div>
-					<div class="team__card-speciality">визуалист</div>
-				</div>
-			</div>
-
+			<?php get_template_part('template-parts/team-elem');?>
 		</div>
-
 	</div>
 </section>
 

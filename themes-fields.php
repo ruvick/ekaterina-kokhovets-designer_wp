@@ -33,36 +33,42 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
             ->set_width(50),
         ))
     ))
-    ->add_tab('Разделы', array(
-      Field::make('complex', 'complex_sections', 'Разделы на главной')
-      ->set_max(5) // Можно будет выбрать только 5 постов
-      ->add_fields(array(
-        Field::make('image', 'img_sections', 'Фото')
-        ->set_width(30),
-        Field::make('text', 'text_sections', 'Текст')   
-        ->set_width(30),
-        Field::make('text', 'link_sections', 'Ссылка')   
-        ->set_width(30),
-        Field::make("checkbox", "checkbox_stock", "Большая картинка"),
-        Field::make("checkbox", "checkbox_stock_title", "Большая картинка, заголовок слева"),
-        ))
-    ))
-    ->add_tab('Отзывы', array(
-      Field::make('complex', 'complex_reviews', 'Выводим Отзывы')
+    ->add_tab('Команда', array(
+      Field::make('image', 'team_images', 'Картинка блока')
+      ->set_width(10),
+      Field::make('text', 'team_title', 'Заголовок')   
+      ->set_width(30),
+      Field::make('text', 'team_subtitle', 'Подзаголовок')   
+      ->set_width(30),
+      Field::make('rich_text', 'team_text', 'Текст')   
+      ->set_width(100),
+      Field::make('complex', 'complex_team', 'Выводим карточки Команды')
       // ->set_max(3) // Можно будет выбрать только 5 постов
       ->add_fields(array(
-        Field::make('image', 'img_reviews', 'Фото')
+        Field::make('image', 'img_team', 'Фото')
         ->set_width(10),
-        Field::make('text', 'name_reviews', 'Имя')   
+        Field::make('text', 'name_team', 'Имя')   
         ->set_width(10),
-        Field::make('text', 'data_reviews', 'Дата')   
-        ->set_width(10),
-        Field::make('text', 'descp_reviews', 'Текст')   
-        ->set_width(30),
-        Field::make('text', 'link_reviews', 'Ссылка')   
+        Field::make('text', 'specialization_team', 'Специализация')   
         ->set_width(10),
         )) 
     ))
+    // ->add_tab('Отзывы', array(
+    //   Field::make('complex', 'complex_reviews', 'Выводим Отзывы')
+    //   // ->set_max(3) // Можно будет выбрать только 5 постов
+    //   ->add_fields(array(
+    //     Field::make('image', 'img_reviews', 'Фото')
+    //     ->set_width(10),
+    //     Field::make('text', 'name_reviews', 'Имя')   
+    //     ->set_width(10),
+    //     Field::make('text', 'data_reviews', 'Дата')   
+    //     ->set_width(10),
+    //     Field::make('text', 'descp_reviews', 'Текст')   
+    //     ->set_width(30),
+    //     Field::make('text', 'link_reviews', 'Ссылка')   
+    //     ->set_width(10),
+    //     )) 
+    // ))
     ->add_tab('Вставки внешних кодов', array(
       Field::make('text', 'code_yandex_metrica', 'Код для Яндекс.Метрики')   
       ->set_width(50),

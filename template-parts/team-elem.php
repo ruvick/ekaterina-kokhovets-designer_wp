@@ -1,13 +1,21 @@
-<div class="team__column">
-  <div class="team__card">
-    <div class="team__card-img">
-      <picture><source srcset="<?php echo get_template_directory_uri();?>/img/team/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/team/01.jpg?_v=1658398529275" alt=""></picture>
-    </div>
-    <h5 class="team__card-name">
-      НАТАЛЬЯ
-      Александровна
-    </h5>
-    <div class="team__card-line line-mini"></div>
-    <div class="team__card-speciality">проектировщик</div>
-  </div>
-</div>
+<? 
+	$team = carbon_get_theme_option('complex_team'); 
+	if ($team) {
+		$teamIndex = 0;
+		foreach ($team as $item) {
+			?>
+        <div class="team__column">
+          <div class="team__card">
+            <div class="team__card-img">
+              <img src="<?php echo wp_get_attachment_image_src($item['img_team'], 'large')[0]; ?>" loading="lazy" alt="<? the_title();?>">
+            </div>
+            <h5 class="team__card-name"><? echo $item['name_team']; ?></h5>
+            <div class="team__card-line line-mini"></div>
+            <div class="team__card-speciality"><? echo $item['specialization_team']; ?></div>
+          </div>
+        </div>
+			<?
+			$teamIndex++; 
+		}
+	}
+	?>
