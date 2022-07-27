@@ -202,7 +202,7 @@
 </section>
 
 <section id="consultation" class="consultation section">
-	<div class="consultation__nuar_blk nuar_blk"></div>
+	<!-- <div class="consultation__nuar_blk nuar_blk"></div> -->
 	<div class="_container">
 		<h2 class="consultation__title title">
 			Консультация дизайнера <br>

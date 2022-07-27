@@ -23,7 +23,7 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section id="page-section" class="page-section">
+	<section id="page-section" class="page-section page-section-single">
 		<div class="_container">
 
       <div class="page-section__service">
