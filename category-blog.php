@@ -8,9 +8,8 @@
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
 			<h1 class="page-banner__title title">
-        <? single_cat_title(); ?>
-				<!-- Мы предлагаем <br>
-				<span>НАШИ УСЛУГИ</span> -->
+				Полезные материалы <br>
+				<span><? single_cat_title(); ?></span>
 			</h1>
 		</div>
 	</section> 

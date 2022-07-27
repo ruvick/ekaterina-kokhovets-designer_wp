@@ -202,6 +202,7 @@ h1 span {
   font-weight: 300;
   font-size: 70px;
   line-height: 120%;
+  text-transform: uppercase;
   color: #fff;
   margin-top: -30px;
   display: block;
@@ -219,6 +220,7 @@ h2 span {
   font-size: 70px;
   font-weight: 300;
   line-height: 120%;
+  text-transform: uppercase;
   color: #1A1818;
   margin-top: -25px;
   display: block;
