@@ -55,52 +55,24 @@
 		</h2>
 
 		<div class="objects__inner">
-
-			<div class="objects__column">
-				<a href="page-house.html" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/01.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Дома <br>
-							<span>КОТТЕДЖ В ЛЕСУ</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
-			<div class="objects__column">
-				<a href="" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/01.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Квартиры <br>
-							<span>УЮТНАЯ КВАРТИРА</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
-			<div class="objects__column">
-				<a href="" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/01.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Дома <br>
-							<span>ТАУНХАУС</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
+			<?php 
+					$posts = get_posts( array(
+						'numberposts' => 3,
+						'category'    =>13,
+						'orderby'     => 'date',
+						'order'       => 'ASC',
+						'include'     => array(),
+						'exclude'     => array(),
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'post',
+						'suppress_filters' => true,
+					) );
+					$result = wp_get_recent_posts( $args );
+						foreach( $posts as $post ){
+							get_template_part('template-parts/portfolio-elem');
+					} 
+				?>
 		</div>
 
 		<h2 class="objects__title title">
@@ -109,55 +81,27 @@
 		</h2>
 
 		<div class="objects__inner">
-
-			<div class="objects__column">
-				<a href="" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/04.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Рестораны и кафе <br>
-							<span>РЕСТОРАН В СОЧИ</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
-			<div class="objects__column">
-				<a href="" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/05.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Рестораны и кафе <br>
-							<span>КАФЕ В ПИТЕРЕ</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
-			<div class="objects__column">
-				<a href="" class="card-objects">
-					<div class="card-objects__img">
-						<div class="card-objects__img-nuar_blk nuar_blk"></div>
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/objects/06.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/objects/06.jpg?_v=1658398529275" alt=""></picture>
-					</div>
-					<div class="card-objects__descp">
-						<h3 class="card-objects__descp-title">
-							Отели <br>
-							<span>У МОРЯ</span>
-						</h3>
-					</div>
-				</a>
-			</div>
-
+			<?php 
+					$posts = get_posts( array(
+						'numberposts' => 3,
+						'category'    =>14,
+						'orderby'     => 'date',
+						'order'       => 'ASC',
+						'include'     => array(),
+						'exclude'     => array(), 
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'post',
+						'suppress_filters' => true,
+					) );
+					$result = wp_get_recent_posts( $args );
+						foreach( $posts as $post ){
+							get_template_part('template-parts/portfolio-elem');
+					} 
+				?>
 		</div>
 
-		<a href="#" class="objects__btn btn btn_white">Смотреть все портфолио</a>
+		<a href="<?php echo get_category_link(4);?>" class="objects__btn btn btn_white">Смотреть все портфолио</a>
 
 	</div>
 </section>

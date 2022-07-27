@@ -4002,6 +4002,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .card-objects__descp-title span {
   color: #fff;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .objects__btn {

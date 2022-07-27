@@ -128,7 +128,20 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         ->add_fields(array(   
           Field::make('image', 'page-banner', 'Банер страницы' )->set_width(50),
     ));
-
+    Container::make('post_meta', 'Доп поля для Портфолио')
+    ->show_on_template('single-portfolio.php')
+    ->add_fields(array(
+      Field::make('text', 'portfolio_subtitle', 'Подзаголовок')->set_width(30),
+    ));
+    Container::make('post_meta', 'Доп поля для Отзывы')
+    ->show_on_template('single-otzyvy.php')
+    ->add_fields(array(
+      Field::make( 'complex', 'otzyvy_picture', "Картинки отзыва" )
+      ->add_fields( array(
+        Field::make('image', 'otzyvy_img', 'Изображение' )->set_width(30),   
+      ) ),
+      Field::make('text', 'otzyvy_link', 'Ссылка на отзыв')->set_width(30),
+    ));
 
 
     Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
