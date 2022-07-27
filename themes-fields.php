@@ -124,7 +124,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
           ->set_width(50),
     ) );
     Container::make('post_meta', 'page', 'Доп поля')
-    ->show_on_template(array('page.php', 'page-team.php'))
+    ->show_on_template(array('page.php', 'page-team.php', 'single-service.php', 'single-portfolio.php', 'page-contacts.php'))
         ->add_fields(array(   
           Field::make('image', 'page-banner', 'Банер страницы' )->set_width(50),
     ));

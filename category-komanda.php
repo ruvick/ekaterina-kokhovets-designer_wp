@@ -4,7 +4,13 @@
 
 <main class="page">
 
-	<section class="page-banner page-banner-services">
+<?php 
+	$term_id = get_queried_object_id();
+	$image_id = get_term_meta( $term_id, '_thumbnail_id', 1 );
+	$image_url = wp_get_attachment_image_url( $image_id, 'full' );
+?>
+
+	<section class="page-banner" style="background-image: url(<?php echo $image_url ?>);">
     <div class="bg-top"></div>
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
