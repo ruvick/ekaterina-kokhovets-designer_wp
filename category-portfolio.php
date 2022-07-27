@@ -17,6 +17,17 @@
 
 	<section id="page-section" class="page-section">
 		<div class="_container">
+
+			<div class="cat-port-nanigation">
+				<ul class="cat-port-nanigation-list">
+					<li class="cat-port-nanigation-list-item"><a href="#" class="cat-port-nanigation-list-item-link">ДОМА</a></li>
+					<li class="cat-port-nanigation-list-item"><a href="#" class="cat-port-nanigation-list-item-link">КВАРТИРЫ</a></li>
+					<li class="cat-port-nanigation-list-item"><a href="#" class="cat-port-nanigation-list-item-link">ОФИСЫ</a></li>
+					<li class="cat-port-nanigation-list-item"><a href="#" class="cat-port-nanigation-list-item-link">КАФЕ И РЕСТОРАНЫ</a></li>
+					<li class="cat-port-nanigation-list-item"><a href="#" class="cat-port-nanigation-list-item-link">ЛАНШАФТНЫЙ ДИЗАЙН</a></li>
+				</ul>
+			</div>
+
       <div class="objects__inner page-inner">
 				<?php
 					while (have_posts()) :

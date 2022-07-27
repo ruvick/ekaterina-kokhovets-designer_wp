@@ -4703,7 +4703,29 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   margin-bottom: 30px;
 }
 
+.cat-port-nanigation {
+  margin-bottom: 40px;
+}
 
+.cat-port-nanigation-list {
+  display: flex;
+  justify-content: center;
+}
+
+.cat-port-nanigation-list-item {
+  border-right: 1px solid #CC870B;
+}
+
+.cat-port-nanigation-list-item:last-child {
+  border-right: none;
+}
+
+
+.cat-port-nanigation-list-item-link {
+  font-size: 18px;
+  color: #1a1818;
+  padding: 0 40px;
+}
 
 
 
