@@ -21,7 +21,7 @@
 									<h1 class="slider-bg__title title"><? echo $item['slider_title']; ?></h1>
 								<? } ?>
 								<? if (!empty($item['slider_link_text'])) { ?>
-									<a href="<? echo $item['slider_link']; ?>" class="slider-bg__link btn _popup-link">Дома и квартиры</a>
+									<a href="<? echo $item['slider_link']; ?>" class="slider-bg__link btn _popup-link"><? echo $item['slider_link_text']; ?></a>
 								<? } ?>
 							</div>
 						</div>
