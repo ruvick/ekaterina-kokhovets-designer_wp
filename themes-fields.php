@@ -132,6 +132,10 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     ->show_on_template('single-portfolio.php')
     ->add_fields(array(
       Field::make('text', 'portfolio_subtitle', 'Подзаголовок')->set_width(30),
+      Field::make( 'complex', 'portfolio_slider', "Картинки" )
+      ->add_fields( array(
+        Field::make('image', 'portfolio_img', 'Изображение' )->set_width(30),   
+      ) ),
     ));
     Container::make('post_meta', 'Доп поля для Отзывы')
     ->show_on_template('single-otzyvy.php')

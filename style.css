@@ -4486,6 +4486,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /* Оформление дефолтных стилей */
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-bottom: 25px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
 .content ul {
   margin-bottom: 35px;
 }
@@ -4729,11 +4741,137 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   padding: 0 40px;
 }
 
+.page-section__portfolio {}
+
+.page-section__portfolio-slider {
+  max-height: 700px;
+  margin-bottom: 45px;
+}
+
+.portfolio-slider__slide {
+  background: grey;
+}
+
+.page-section__portfolio-content {}
+
+.page-section__portfolio-link {
+  margin-top: 50px;
+}
 
 
+.page-section__service-content {
+  margin-bottom: 45px;
+}
 
+.page-section__service-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
 
+.page-section__service-slider {
+  width: 784px;
+  max-height: 420px;
+  margin-right: 85px;
+  border: 1px solid #000;
+}
 
+.service-slider__slide {
+  background: grey;
+}
+
+.page-section__service-content {}
+
+.page-section__service-link {
+  margin-top: 50px;
+}
+
+.page-section__service-form {
+  padding: 15px 0;
+}
+
+.page-section__service-form-title {
+  margin-bottom: 43px;
+}
+
+.page-section__service-form-form {}
+
+.page-section__service-form-form-input {
+  margin-bottom: 26px;
+}
+
+.page-section__service-form-form-input:last-child {
+  margin-bottom: 33px;
+}
+
+.service-form-form-checkbox {
+  display: block;
+  margin-bottom: 58px;
+}
+
+.service-form-form-checkbox .checkbox__text {
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #1a1818;
+}
+
+.page-section__service-form-form-btn {}
+
+.page-section__service-file-title {
+  margin-bottom: 30px;
+}
+
+.flieBlock-section {
+  padding: 30px 0;
+  background: #E0E1E3;
+}
+
+.flie-card__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex: 0 1 30%;
+  margin-bottom: 36px;
+}
+
+.flie-card__item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 43.6px;
+  flex: 0 0 43.6px;
+  height: 58.3px;
+  margin-right: 25px;
+}
+
+.flie-card__item-icon:before {
+  content: "";
+  float: left;
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0My42MjQiIGhlaWdodD0iNTcuMzc4IiB2aWV3Qm94PSIwIDAgNDMuNjI0IDU3LjM3OCI+DQogIDxwYXRoIGlkPSLQmtC+0L3RgtGD0YBfMTQ2IiBkYXRhLW5hbWU9ItCa0L7QvdGC0YPRgCAxNDYiIGQ9Ik02Njc4LjE0NiwzNjc0LjQ4NGwyNC4wMzgsMCwuMDYyLDBhLjcwNS43MDUsMCwwLDEsLjUyNi4yMzlsMTQuNiwxNC42MTdhLjcuNywwLDAsMSwuMjQyLjUyNWwwLC4wNi0uMDE2LDM3Ljc3N2E0LjE2Niw0LjE2NiwwLDAsMS00LjE1Myw0LjE1N2gtMzUuM3YtLjAwNmE0LjE1MSw0LjE1MSwwLDAsMS00LjE1MS00LjE1MWgwdi00OS4wNjRhNC4xNiw0LjE2LDAsMCwxLDQuMTUzLTQuMTU0djBoMHYwWm0zLjE3MSwzNy45ODFoMjEuNTEzYS44NTUuODU1LDAsMCwwLDAtMS42ODloLTIxLjUxM2EuODU1Ljg1NSwwLDAsMCwwLDEuNjg5Wm0wLDUuMDk0aDE0LjI2NmEuODU1Ljg1NSwwLDAsMCwwLTEuNjg5aC0xNC4yNjZhLjg1NS44NTUsMCwwLDAsMCwxLjY4OVptMjUuNy0uODEzYTQuMTM5LDQuMTM5LDAsMCwwLTIuOTMxLDEuMjE0bC0uMDM1LjAzM2E0LjE1LDQuMTUsMCwwLDAsNS45LDUuODM3di0uMDA1YTQuMTUzLDQuMTUzLDAsMCwwLDAtNS44NjVsMCwwYTQuMTM0LDQuMTM0LDAsMCwwLTIuOTM0LTEuMjExWm0tMy45MTEuMjMzLS4wMzguMDQyYTUuNTMxLDUuNTMxLDAsMCwwLDcuODYxLDcuNzgybDAsMGE1LjUyOCw1LjUyOCwwLDAsMCwwLTcuODJsMCwwdjBoMGE1LjUzMiw1LjUzMiwwLDAsMC03LjgyMywwWm0xMy4xMi0yNi40MjJoLTEwLjUxOWE0LjE0LDQuMTQsMCwwLDEtMi45MzYtMS4yMmgwbDAtLjAwOGE0LjE1LDQuMTUsMCwwLDEtMS4yMTMtMi45Mjl2LTEwLjUzNWgtMjMuNDA4djBoMHYwYTIuNzc3LDIuNzc3LDAsMCwwLTIuNzY4LDIuNzczVjM3MjcuN2gwYTIuNzgxLDIuNzgxLDAsMCwwLDIuNzcsMi43NzN2LS4wMDZoMzUuM2EyLjc3NCwyLjc3NCwwLDAsMCwyLjc3Mi0yLjc2N2wuMDE2LTM3LjE0NVptLTEzLjI5Mi0xMy43MTJ2OS41NTVhMi43NjIsMi43NjIsMCwwLDAsLjgxMiwxLjk2aDBhMi43NTcsMi43NTcsMCwwLDAsMS45NTguODExaDkuNTQyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTY2NzMuOTkgLTM2NzQuNDgxKSIgZmlsbD0iI2NjODcwYiIgZmlsbC1ydWxlPSJldmVub2RkIi8+DQo8L3N2Zz4NCg==');
+}
+
+.flie-card__item-descp {
+  font-size: 19px;
+  color: #1a1818;
+}
 
 
 
