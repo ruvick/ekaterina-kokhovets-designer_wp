@@ -132,14 +132,14 @@ let sliderBg = new Swiper('.slider-bg', {
 	//lazy: true,
 	// Dotts
 	pagination: {
-		el: '.swiper-paggination',
+		el: '.sl-main-paggination',
 		clickable: true,
 	},
 	// Arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
 	/*
 	breakpoints: {
 		320: {
@@ -195,7 +195,7 @@ let servicesSl = new Swiper('.servicesSl', {
 	//lazy: true,
 	// Dotts
 	pagination: {
-		el: '.servicesSl-swiper-paggination',
+		el: '.services-paggination',
 		clickable: true,
 	},
 	// Arrows

@@ -31,7 +31,7 @@
 			}
 			?> 
 		</div>
-		<div class="product-sl-paggination swiper-paggination"></div>
+		<div class="product-sl-paggination sl-main-paggination swiper-paggination"></div>
 	</div>
 
 </section>
