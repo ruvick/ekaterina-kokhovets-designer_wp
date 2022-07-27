@@ -15,6 +15,7 @@
 				foreach ($pict as $item) {
 					?>
 						<div class="slider-bg__slide slider__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
+							<div class="bg-top"></div>
 							<div class="nuar_blk"></div>
 							<div class="slider-bg__container _container">
 								<? if (!empty($item['slider_title'])) { ?>
@@ -183,8 +184,8 @@
             <img src="<?php echo wp_get_attachment_image_src(carbon_get_theme_option("team_images"), 'full')[0];?>" alt="<? the_title();?>">						
           </div>
 					<div class="team__descp">
-						<h5 class="team__title"><?php echo carbon_get_theme_option('team_title'); ?></h5>
-						<p class="team__subtitle"><?php echo carbon_get_theme_option('team_subtitle'); ?></p>
+						<h5 class="team__descp-title"><?php echo carbon_get_theme_option('team_title'); ?></h5>
+						<p class="team__descp-subtitle"><?php echo carbon_get_theme_option('team_subtitle'); ?></p>
 						<div class="team__descp-text-block">
               <? echo $teamPost; ?>
 						</div>

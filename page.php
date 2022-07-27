@@ -26,6 +26,7 @@ get_header(); ?>
 	} ?>
 
 	<section class="page-banner" style="background-image: url(<?php echo $banner?>);">
+		<div class="bg-top"></div>
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
 			<h1 class="page-banner__title title">

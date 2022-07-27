@@ -4231,15 +4231,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 23px 0;
 }
 
-.team__title {
-  margin-bottom: 15px;
+.team__descp-title {
+  margin-bottom: 3px;
 }
 
-.team__subtitle {
+.team__descp-subtitle {
   font-size: 18px;
   font-weight: 700;
   color: #B58439;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .team__descp-text-block p {
@@ -4873,7 +4873,18 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   color: #1a1818;
 }
 
-
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 263px;
+  opacity: 0.9;
+  /* background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover; */
+  background-image: url('img/bg-top.svg');
+}
 
 
 

@@ -5,6 +5,7 @@
 <main class="page">
 
 	<section class="page-banner page-banner-services">
+		<div class="bg-top"></div>
 		<div class="page-banner__nuar_blk nuar_blk"></div>
 		<div class="page-banner__container _container">
 			<h1 class="page-banner__title title">
