@@ -142,7 +142,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       ) ),
       Field::make('text', 'otzyvy_link', 'Ссылка на отзыв')->set_width(30),
     ));
-
+    Container::make('post_meta', 'Доп поля для Услуги')
+    ->show_on_template('single-service.php')
+    ->add_fields(array(
+      Field::make( 'complex', 'service_picture', "Картинки услуги" )
+      ->add_fields( array(
+        Field::make('image', 'service_img', 'Изображение' )->set_width(30),   
+      ) ),
+    ));
 
     Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
     ->show_on_post_type(array( 'ultra'))

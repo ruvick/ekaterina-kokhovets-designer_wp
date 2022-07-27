@@ -13,15 +13,20 @@
 		</div>
 		<div class="services__card-slider ">
 			<div class="services__card-slider-inner servicesSl _swiper">
+			<? 
+				$servPict = carbon_get_post_meta(get_the_ID(),"service_picture"); 
+					if ($servPict) {
+				$servPictIndex = 0;
+					foreach ($servPict as $item) {
+			?>
 				<div class="services__card-slider-slide slider-slide">
-					<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/01.jpg?_v=1658398529275" alt=""></picture>
+					<img src="<?php echo wp_get_attachment_image_src($item['service_img'], 'large')[0]; ?>" alt=""> 						
 				</div>
-				<div class="services__card-slider-slide slider-slide">
-					<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/02.jpg?_v=1658398529275" alt=""></picture>
-				</div>
-				<div class="services__card-slider-slide slider-slide">
-					<picture><source srcset="<?php echo get_template_directory_uri();?>/img/services/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/services/03.jpg?_v=1658398529275" alt=""></picture>
-				</div>
+			<?
+				$servPictIndex++; 
+					}
+				}
+			?>
 			</div>
 			<div class="servicesSl-swiper-paggination"></div>
 		</div>
