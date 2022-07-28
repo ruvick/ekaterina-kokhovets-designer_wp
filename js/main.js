@@ -195,7 +195,7 @@ let servicesSl = new Swiper('.servicesSl', {
 	//lazy: true,
 	// Dotts
 	pagination: {
-		el: '.services-paggination',
+		el: '.servicesSl-paggination',
 		clickable: true,
 	},
 	// Arrows

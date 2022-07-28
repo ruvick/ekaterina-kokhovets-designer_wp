@@ -28,7 +28,7 @@
 				}
 			?>
 			</div>
-			<div class="product-sl-paggination services-paggination"></div> 
+			<div class="product-sl-paggination servicesSl-paggination"></div> 
 		</div>
 		<a href="<?echo get_the_permalink(get_the_ID());?>" class="services__card-btn btn btn_white">Подробнее</a>
 	</div>
