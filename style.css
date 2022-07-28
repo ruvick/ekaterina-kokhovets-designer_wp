@@ -4933,9 +4933,140 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 
 
+.pagination {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 
+.pagination,
+.pagination__nav-links {
+  width: 100%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
+.pagination__back {
+  max-width: 6px;
+  width: 100%;
+  height: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 10px;
+  position: relative;
+}
 
+.pagination__back:before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2LjEwMyIgaGVpZ2h0PSI5Ljc4NiIgdmlld0JveD0iMCAwIDYuMTAzIDkuNzg2Ij4NCiAgPGcgaWQ9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMXzM1MSIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCAzNTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzQ0Ljc5NSAtMTg0MC4yNjIpIj4NCiAgICA8bGluZSBpZD0i0JvQuNC90LjRj183NSIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDc1IiB4MT0iNC42OTIiIHkxPSI0LjE3MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzc0NS41IDE4NDUuMTcxKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYxNjE1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPg0KICAgIDxsaW5lIGlkPSLQm9C40L3QuNGPXzc2IiBkYXRhLW5hbWU9ItCb0LjQvdC40Y8gNzYiIHkxPSI0LjE3MSIgeDI9IjQuNjkyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNzQ1LjUgMTg0MC45NjgpIiBmaWxsPSJub25lIiBzdHJva2U9IiMxNjE2MTUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwvZz4NCjwvc3ZnPg0K");
+}
+
+.page-numbers,
+.pagination__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 21px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.pagination__block-dot {
+  margin-right: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 30px;
+}
+
+.pagination__dot {
+  display: block;
+  font-size: 16px;
+}
+
+.pagination__next {
+  max-width: 6px;
+  width: 100%;
+  height: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+}
+
+.pagination__next:after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2LjEwMyIgaGVpZ2h0PSI5Ljc4NiIgdmlld0JveD0iMCAwIDYuMTAzIDkuNzg2Ij4NCiAgPGcgaWQ9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMXzM1MiIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCAzNTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTA1LjAyNSAtMTg0MC4yNjIpIj4NCiAgICA8bGluZSBpZD0i0JvQuNC90LjRj183NyIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDc3IiB5MT0iNC4xNzEiIHgyPSI0LjY5MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzkwNS43MyAxODQ1LjE3MSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MTYxNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgICA8bGluZSBpZD0i0JvQuNC90LjRj183OCIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDc4IiB4MT0iNC42OTIiIHkxPSI0LjE3MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzkwNS43MyAxODQwLjk2OCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MTYxNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPC9nPg0KPC9zdmc+DQo=");
+}
+
+.current {
+  font-weight: 700;
+  color: #fff;
+  background: #cc870b;
+}
+
+.pagging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.pagging__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.catalog-sec__pagination {
+  margin-top: 35px;
+}
 
 
 
