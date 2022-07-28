@@ -29,7 +29,12 @@
 						}
 					?>
 					</div>
-					<!-- <div class="servicesSl-swiper-paggination"></div> -->
+					<!-- Кнопки-стрлеки -->
+					<div class="reviews__card-slider__swiper-button-block swiper-button-block">
+						<div class="reviews__card-slider__swiper-button-next swiper-button swiper-button-next"></div>
+						<div class="reviews__card-slider__swiper-button-prev swiper-button swiper-button-prev"></div>
+					</div>
+					<!-- Кнопки-стрлеки End -->
 				</div>
 			</div>
 			<!-- </div> -->

@@ -263,10 +263,10 @@ let serviceSl = new Swiper('.service-slider', {
 		clickable: true,
 	},
 	// Arrows
-	// navigation: {
-	// 	nextEl: '.swiper-button-next',
-	// 	prevEl: '.swiper-button-prev',
-	// },
+	navigation: {
+		nextEl: '.service-slider__swiper-button-next',
+		prevEl: '.service-slider__swiper-button-prev',
+	},
 	/*
 	breakpoints: {
 		320: {
@@ -327,10 +327,10 @@ let portfolioSl = new Swiper('.portfolio-slider', {
 		clickable: true,
 	},
 	// Arrows
-	// navigation: {
-	// 	nextEl: '.swiper-button-next',
-	// 	prevEl: '.swiper-button-prev',
-	// },
+	navigation: {
+		nextEl: '.portfolio-slider__swiper-button-next',
+		prevEl: '.portfolio-slider__swiper-button-prev',
+	},
 	/*
 	breakpoints: {
 		320: {
@@ -387,14 +387,14 @@ let reviewsSl = new Swiper('.reviewsSl', {
 	//preloadImages: false,
 	//lazy: true,
 	// Dotts
-	pagination: {
-		el: '.reviewsSl-swiper-paggination',
-		clickable: true,
-	},
+	// pagination: {
+	// 	el: '.reviewsSl-swiper-paggination',
+	// 	clickable: true,
+	// },
 	// Arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.reviews__card-slider__swiper-button-next',
+		prevEl: '.reviews__card-slider__swiper-button-prev',
 	},
 	/*
 	breakpoints: {
@@ -459,10 +459,10 @@ let slider = new Swiper('.slider', {
 	//	clickable: true,
 	//},
 	// Arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
 	/*
 	breakpoints: {
 		320: {
@@ -521,10 +521,10 @@ let productSlider = new Swiper('.product__slider', {
 	//	clickable: true,
 	//},
 	// Arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
 	/*
 	breakpoints: {
 		320: {
