@@ -319,8 +319,8 @@ function sendphone()
 					add_action("created_{$taxname}",           Array( & $this, 'save_term_image' ),    10, 2 );
 					add_action("edited_{$taxname}",            Array( & $this, 'updated_term_image' ), 10, 2 );
 
-					add_filter("manage_edit-{$taxname}_columns",  Array( & $this, 'add_image_column' ) );
-					add_filter("manage_{$taxname}_custom_column", Array( & $this, 'fill_image_column' ), 10, 3 );
+					// add_filter("manage_edit-{$taxname}_columns",  Array( & $this, 'add_image_column' ) );
+					// add_filter("manage_{$taxname}_custom_column", Array( & $this, 'fill_image_column' ), 10, 3 );
 				}
 			}
 

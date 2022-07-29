@@ -4441,7 +4441,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .page-section {
-  padding: 75px 0;
+  padding: 55px 0;
 }
 
 .page-inner {
@@ -4534,6 +4534,19 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .ymaps-2-1-78-map-copyrights-promo {
   display: none !important;
 }
+
+.uni_text_blk {
+  width:100%;
+}
+
+.uni_text_blk p{ 
+  margin: 1em;
+}
+
+.uni_text_blk_incat{
+  margin-bottom: 40px;
+}
+
 
 @media (max-width: 460px) {
   .block__map {
@@ -4724,11 +4737,13 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 .cat-port-nanigation-list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
 }
 
 .cat-port-nanigation-list-item {
   border-right: 1px solid #CC870B;
+  margin-bottom: 20px;
 }
 
 .cat-port-nanigation-list-item:last-child {
@@ -4740,6 +4755,12 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   font-size: 18px;
   color: #1a1818;
   padding: 0 40px;
+  text-transform: uppercase;
+}
+
+.cat-port-nanigation-list-item-link.lnk_select,
+.cat-port-nanigation-list-item-link:hover {
+  color: #CC870B;
 }
 
 .page-section__portfolio {}
