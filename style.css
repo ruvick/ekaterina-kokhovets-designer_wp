@@ -4102,6 +4102,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   overflow: hidden;
 }
 
+.services__card-slider img {
+  border: 1px solid lightgray;
+}
+
 .services__card-btn {
   margin-top: 33px;
 }
@@ -4540,7 +4544,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .uni_text_blk p{ 
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .uni_text_blk_incat{
@@ -5089,7 +5093,46 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   margin-top: 35px;
 }
 
+.uni_text_blk {
+  width:100%;
+}
 
+.uni_text_blk ul{ 
+  margin: 10px 0 10px 30px;
+}
+
+.uni_text_blk ul li{
+  position: relative;
+}
+
+.uni_text_blk ul li::before{
+  content: ""; 
+  width: 5px;
+  height: 5px;
+  background-color: #cc870b;
+  position: absolute;
+  top: calc(100% / 2 - 2px);
+  left: -15px;
+}
+
+.uni_text_blk h2{
+  font-family: "Lato";
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.uni_text_blk h3{
+  font-family: "Lato";
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.uni_text_blk h4{
+  font-family: "Lato";
+  line-height: 1;
+}
 
 
 

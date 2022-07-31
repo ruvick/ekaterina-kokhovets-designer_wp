@@ -35,7 +35,7 @@ get_header(); ?>
 
       <div class="page-section__service">
 
-				<div class="page-section__service-content content">
+				<div class="page-section__service-content content uni_text_blk">
 					<?php the_content(); ?>
 				</div>
 
@@ -96,35 +96,21 @@ get_header(); ?>
 		<div class="_container">
 			<div class="flieBlock-section__inner flie-card__inner">
 
-				<a href="#" download class="flie-card">
+			<?
+				$serviceDoc = carbon_get_post_meta(get_the_ID(),"service_docs"); 
+					if ($serviceDoc) {
+				$serviceDocIndex = 0;
+					foreach ($serviceDoc as $item) {
+			?>
+				<a href="<?php echo wp_get_attachment_url($item['service_docs_file']) ?>" download class="flie-card">
 					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №1</p>
+					<p class="flie-card__item-descp"><? echo $item['service_docs_nmae']?></p>
 				</a>
-
-				<a href="#" download class="flie-card">
-					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №2</p>
-				</a>
-
-				<a href="#" download class="flie-card">
-					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №3</p>
-				</a>
-
-				<a href="#" download class="flie-card">
-					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №4</p>
-				</a>
-
-				<a href="#" download class="flie-card">
-					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №5</p>
-				</a>
-
-				<a href="#" download class="flie-card">
-					<span class="flie-card__item-icon"></span>
-					<p class="flie-card__item-descp">Пример документа №6</p>
-				</a>
+			<?
+				$serviceSlIndex++;
+					}
+				}
+			?> 
 
 			</div>
 

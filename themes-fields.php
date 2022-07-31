@@ -149,6 +149,11 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     Container::make('post_meta', 'Доп поля для Услуги')
     ->show_on_template('single-service.php')
     ->add_fields(array(
+      Field::make( 'complex', 'service_docs', "Документы" )
+      ->add_fields( array(
+        Field::make('file', 'service_docs_file', 'Файл' )->set_width(30),   
+        Field::make('text', 'service_docs_nmae', 'Файл' )->set_width(30),   
+      ) ),
       Field::make( 'complex', 'service_picture', "Картинки услуги" )
       ->add_fields( array(
         Field::make('image', 'service_img', 'Изображение' )->set_width(30),   

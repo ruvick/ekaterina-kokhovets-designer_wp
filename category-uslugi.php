@@ -30,12 +30,24 @@
 	
 
       <div class="services__inner page-inner">
-				<?php
-					while (have_posts()) :
-						the_post();
-						get_template_part('template-parts/services-elem');
-					endwhile;
-				?>
+	  		<?php 
+					$posts = get_posts( array(
+						'numberposts' => 3,
+						'category'    => 5,
+						'orderby'     => 'date',
+						'order'       => 'ASC',
+						'include'     => array(),
+						'exclude'     => array(),
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'post',
+						'suppress_filters' => true,
+					) );
+					$result = wp_get_recent_posts( $args );
+						foreach( $posts as $post ){
+							get_template_part('template-parts/services-elem');
+					} 
+			?>
       </div>
 	  </div>
 	</section>
