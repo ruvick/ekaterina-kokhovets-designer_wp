@@ -208,17 +208,19 @@
 			Консультация дизайнера <br>
 			<span>У Вас остались вопросы? Мы поможем!</span>
 		</h2>
-		<form action="#" class="consultation__form">
+		<form action="#" id="consultation-form" class="consultation__form">
 			<div class="consultation__form-column">
-				<input type="text" name="" placeholder="Введите Ваш телефон*" class="consultation__form-input input">
+				<input type="hidden" name = "form_name" data-valuem = "Название формы" value = "Форма на главной">
+				<input type="hidden" name = "page_lnk" data-valuem = "Адрес страницы" value = "<? echo (is_home())?"https://xn----7sblmei2a5bi4i.xn--p1ai/":get_the_permalink()?>">
+				<input required type="text" name = "name_consultation-form-tel" data-valuem = "Телефон" placeholder="Введите Ваш телефон*" class="consultation__form-input input">
 			</div>
 			<div class="consultation__form-column">
-				<input type="text" name="" placeholder="Сообщение" class="consultation__form-input input">
+				<input required type="text" name = "name_consultation-form-mess" data-valuem = "Имя" placeholder="Сообщение" class="consultation__form-input input">
 				<label for="check" class="consultation__form-checkbox checkbox">
 					<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 					<span class="checkbox__text"><span> Я согласен на обработку персональных данных</span></span>
 				</label>
-				<button type="submit" class="consultation__form-btn btn">Получить консультацию</button>
+				<button type="submit" data-formid="consultation-form" class="consultation__form-btn new_send_btn btn">Получить консультацию</button>
 			</div>
 		</form>
 	</div>

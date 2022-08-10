@@ -62,10 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 xhr.open("POST", allAjax.ajaxurl, true);
 
                 xhr.onload = function () {
-                    form.getElementsByClassName("headen_form_blk")[0].style.display = "none";
-                    form.getElementsByClassName("SendetMsg")[0].style.display = "block";
                     console.log("SEND!")
-                    console.log(xhr.response)
+                    document.location.href = thencs_page
                 };
 
                 xhr.send(data);

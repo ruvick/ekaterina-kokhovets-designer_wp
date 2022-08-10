@@ -38,6 +38,11 @@
   <?php echo carbon_get_theme_option('additional_code_body'); ?>
   <!-- /Дополнительный код -->
 
+  <!-- Скрипт корзины, отправка, личный кабинет -->
+<script>  
+  let thencs_page = "<?echo get_the_permalink(211); ?>"; 
+  let nophoto_page = "<?echo get_bloginfo("template_url");?>/img/no-photo.jpg";
+</script> 
   <div class="wrapper">  
-    <!-- Подключение  модальных окон-->
+    <!-- Подключение  модальных окон--> 
     <? include "modal-win.php";?>
