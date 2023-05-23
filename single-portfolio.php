@@ -33,10 +33,15 @@ get_header(); ?>
 	<section id="page-section" class="page-section">
 		<div class="_container">
 
+		<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			}
+		?>
       <div class="page-section__portfolio">
 
 				<div class="page-section__portfolio-slider">
-					<div class="slider-bg-wrap ">
+					<div class="slider-bg-wrap slider-bg-wrap-portfolio">
 						<div class="portfolio-slider _swiper">
 							<?
 								$portfolioSl = carbon_get_post_meta(get_the_ID(),"portfolio_slider"); 
@@ -44,7 +49,8 @@ get_header(); ?>
 								$portfolioSlIndex = 0;
 									foreach ($portfolioSl as $item) {
 							?>
-								<div class="portfolio-slider__slide slider__slide">
+								<div class="portfolio-slider__slide slider__slide" >
+									<div class="galery_blur" style="background-image: url(<?php echo wp_get_attachment_image_src($item['portfolio_img'], 'large')[0]; ?>);" ></div>
 									<img src="<?php echo wp_get_attachment_image_src($item['portfolio_img'], 'large')[0]; ?>" alt=""> 						
 								</div>
 							<?

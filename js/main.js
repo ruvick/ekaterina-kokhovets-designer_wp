@@ -364,7 +364,6 @@ let portfolioSl = new Swiper('.portfolio-slider', {
 });
 
 
-
 // Сюда пишем класс нашего слайдера и меняем переменную
 let reviewsSl = new Swiper('.reviewsSl', {
 	// effect: 'fade',
@@ -427,9 +426,6 @@ let reviewsSl = new Swiper('.reviewsSl', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
-
-
-
 
 
 // Сюда пишем класс нашего слайдера и меняем переменную

@@ -29,6 +29,18 @@ get_header(); ?>
 		<div class="_container">
 			<div class="page-inner">
 
+			<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			}
+			?> 
+
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title();?></h1>
+					<?php the_content();?>
+					<?php endwhile;?>
+				<?php endif; ?> 
+
 			</div>
 	  </div>
 	</section>
