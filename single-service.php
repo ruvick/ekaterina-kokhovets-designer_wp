@@ -79,7 +79,12 @@ get_header(); ?>
 								<span class="checkbox__text"><span>Заполняя и отправляя данную форму вы даете свое согласие 
 									на обработку персональных данных</span></span>
 							</label>
-							<button type="submit" class="page-section__service-form-form-btn btn">Получить консультацию</button>
+							<div class="usl_btn_wrapper">
+								<button type="submit" class="page-section__service-form-form-btn btn">Получить консультацию</button>
+								<a class="btn ws_btn" href="https://wa.me/79284464100">Написать в WhatsApp</a>
+								<a class="btn" href="tel:+79284464100">Позвонить</a>
+							</div>
+
 						</form>
 					</div>				
 

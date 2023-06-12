@@ -129,7 +129,7 @@
 			<div class="services__inner">
 				<?php 
 					$posts = get_posts( array(
-						'numberposts' => 3,
+						'numberposts' => -1,
 						'category'    => 5,
 						'orderby'     => 'date',
 						'order'       => 'ASC',

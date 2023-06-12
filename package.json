@@ -8,7 +8,7 @@
     "clear_r": "ssh cs70222@92.53.96.167 \"rm wordpress_designer//public_html/wp-content/themes/kokhovets-designer/*.*\"",
     "send_r": "scp -C *.php *.png *.css cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
     "send_ms": "scp -C *.css cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
-    "send_one": "scp -C page.php cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
+    "send_one": "scp -C single-service.php cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
     "send_one1": "scp -C single-kartina.php cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
     "send_head": "scp -C header.php cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
     "send_cat": "scp -C category.php cs70222@92.53.96.167:wordpress_designer//public_html/wp-content/themes/kokhovets-designer/",
