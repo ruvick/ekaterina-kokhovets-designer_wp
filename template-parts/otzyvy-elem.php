@@ -13,7 +13,7 @@
 					<? } ?>
 				</div>
 				<div class="reviews__card-slider ">
-					<div class="reviews__card-slider-inner reviewsSl _swiper">
+					<div class="reviews__card-slider-inner reviewsSl _swiper _swiper<? echo get_the_ID() ?> ">
 					<? 
 						$otzPict = carbon_get_post_meta(get_the_ID(),"otzyvy_picture"); 
 							if ($otzPict) {
@@ -31,8 +31,8 @@
 					</div>
 					<!-- Кнопки-стрлеки -->
 					<div class="reviews__card-slider__swiper-button-block swiper-button-block">
-						<div class="reviews__card-slider__swiper-button-next swiper-button swiper-button-next"></div>
-						<div class="reviews__card-slider__swiper-button-prev swiper-button swiper-button-prev"></div>
+						<div class="reviews__card-slider__swiper-button-next swiper-button swiper-button-next rsb<? echo get_the_ID() ?>"></div>
+						<div class="reviews__card-slider__swiper-button-prev swiper-button swiper-button-prev rsb<? echo get_the_ID() ?>"></div>
 					</div>
 					<!-- Кнопки-стрлеки End -->
 				</div>

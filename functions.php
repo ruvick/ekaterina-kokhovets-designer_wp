@@ -154,6 +154,8 @@ function my_assets()
 
 	wp_enqueue_style("main-style", get_stylesheet_uri(), array(), $style_version, 'all'); // Подключение основных стилей в самом конце
 
+	wp_enqueue_style("all_sliders_css", get_template_directory_uri() . "/all_sliders.css", array(), $style_version, 'all'); //fancybox (стили)
+
 	// Подключение скриптов
 
 	wp_enqueue_script('jquery'); 
@@ -173,6 +175,7 @@ function my_assets()
 		// wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), $scrypt_version, true); //jquery код
 	wp_enqueue_script('vendors', get_template_directory_uri() . '/js/vendors.min.js', array(), $scrypt_version, true); //Библиотеки
 
+	wp_enqueue_script('all_sliders', get_template_directory_uri() . '/js/all_portfolio_sliders.js', array(), $scrypt_version, true);
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
 	wp_localize_script('main', 'allAjax', array(

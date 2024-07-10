@@ -27,7 +27,7 @@
 				<?php
 					while (have_posts()) : 
 						the_post();
-						get_template_part('template-parts/otzyvy-elem');
+						get_template_part('template-parts/otzyvy-elem-new');
 					endwhile;
 				?>
       </div>

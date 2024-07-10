@@ -159,9 +159,11 @@
 		<div class="reviews__inner">
 			<?php query_posts('orderby=rand&showposts=2&cat=6'); ?>
 			<?php if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post(); 
-					get_template_part('template-parts/otzyvy-elem');
- 				endwhile; endif; 
+			<?php 
+					while (have_posts()) : the_post(); 
+						get_template_part('template-parts/otzyvy-elem-new');
+					endwhile; 
+				endif; 
 			?>
 		</div>
 	</div>
@@ -187,7 +189,7 @@
 						<h5 class="team__descp-title"><?php echo carbon_get_theme_option('team_title'); ?></h5>
 						<p class="team__descp-subtitle"><?php echo carbon_get_theme_option('team_subtitle'); ?></p>
 						<div class="team__descp-text-block">
-              <? echo $teamPost; ?>
+              <? echo apply_filters('the_content',$teamPost)Читать отзыв в ВК ?>
 						</div>
 					</div>
 				</div>
