@@ -13,30 +13,33 @@
 					<? } ?>
 				</div>
 				<div class="reviews__card-slider ">
-					<div data-galid="<? echo get_the_ID() ?>" class="swiper portfolio_sw">
-						<div class="swiper-wrapper">
+					
+						<div data-galid="<? echo get_the_ID() ?>" class="swiper portfolio_sw">
+							<div class="swiper-wrapper">
 
-						<? 
-							$otzPict = carbon_get_post_meta(get_the_ID(),"otzyvy_picture"); 
-							if ($otzPict) {
-								$otzPictIndex = 0;
-								foreach ($otzPict as $item) {
-						?>
-							<div class="swiper-slide">
-								<img src="<?php echo wp_get_attachment_image_src($item['otzyvy_img'], 'large')[0]; ?>" alt=""> 						
-							</div>
+							<? 
+								$otzPict = carbon_get_post_meta(get_the_ID(),"otzyvy_picture"); 
+								if ($otzPict) {
+									$otzPictIndex = 0;
+									foreach ($otzPict as $item) {
+							?>
+								<div class="swiper-slide">
+									<img src="<?php echo wp_get_attachment_image_src($item['otzyvy_img'], 'large')[0]; ?>" alt=""> 						
+								</div>
+								
 							
-						
-						<?
-									$otzPictIndex++; 
+							<?
+										$otzPictIndex++; 
+									}
 								}
-							}
-						?>
-				
+							?>
+					
+							</div>
+							<div id="portfolio_sw_btn_prev<? echo get_the_ID() ?>" class="reviews__card-slider__swiper-button-prev swiper-button swiper-button-prev"></div>
+							<div id="portfolio_sw_btn_next<? echo get_the_ID() ?>" class="reviews__card-slider__swiper-button-next swiper-button swiper-button-next"></div>
 						</div>
-						<div id="portfolio_sw_btn_prev<? echo get_the_ID() ?>" class="reviews__card-slider__swiper-button-prev swiper-button swiper-button-prev"></div>
-						<div id="portfolio_sw_btn_next<? echo get_the_ID() ?>" class="reviews__card-slider__swiper-button-next swiper-button swiper-button-next"></div>
-					</div>
+					
+					
 				</div>
 			</div>
 			<!-- </div> -->

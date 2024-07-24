@@ -154,6 +154,7 @@ function my_assets()
 
 	wp_enqueue_style("main-style", get_stylesheet_uri(), array(), $style_version, 'all'); // Подключение основных стилей в самом конце
 
+	// wp_enqueue_style("swiper_css", "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css", array(), $style_version, 'all'); //fancybox (стили)
 	wp_enqueue_style("all_sliders_css", get_template_directory_uri() . "/all_sliders.css", array(), $style_version, 'all'); //fancybox (стили)
 
 	// Подключение скриптов

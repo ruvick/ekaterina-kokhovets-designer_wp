@@ -4132,6 +4132,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reviews__card {
@@ -4142,8 +4143,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -ms-flex: 0 1 48%;
   flex: 0 1 48%;
   background: #C0AC79;
-  max-height: 450px;
-  /* overflow: hidden; */
+  flex-direction: column;
+  min-width: 0;
 }
 
 .reviews__card-descp {
@@ -4189,11 +4190,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .reviews__card-slider {
   position: relative;
-  -webkit-box-flex: 0;
+  /* -webkit-box-flex: 0;
   -ms-flex: 0 0 290px;
   flex: 0 0 290px;
-  max-width: 290px;
+  max-width: 290px; */
   width: 100%;
+  margin-top: auto;
+  height: 300px;
 }
 
 .reviews__card-slider-slide,

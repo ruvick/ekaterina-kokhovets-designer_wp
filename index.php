@@ -189,7 +189,7 @@
 						<h5 class="team__descp-title"><?php echo carbon_get_theme_option('team_title'); ?></h5>
 						<p class="team__descp-subtitle"><?php echo carbon_get_theme_option('team_subtitle'); ?></p>
 						<div class="team__descp-text-block">
-              <? echo apply_filters('the_content',$teamPost)Читать отзыв в ВК ?>
+              				<? echo apply_filters('the_content',$teamPost)?>
 						</div>
 					</div>
 				</div>
